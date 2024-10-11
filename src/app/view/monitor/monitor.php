@@ -29,7 +29,7 @@ include("postinclude.php");
         </div>
     </div>
     <div class="row">
-        <div class="col-md-3 col-sm-12 bg-info" >
+        <div class="col-md-3 col-sm-12" >
 
             <form method="post" action="index.php?controller=Monitor&action=Monitor&id=<?=$monitor->getId();?>">
             <?php if($monitor->getKeszlet()=="Van")
@@ -222,17 +222,7 @@ include("postinclude.php");
                         <div id="hiba"><button onclick="hibamodositas()">Modositás</button></div>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        Hangszoró
-                    </td>
-                    <td>
-                        <?php if($monitor->getHangszoro()=="Van"){?>Van<?php }else {?>Nincs<?php }?>
-                    </td>
-                    <td>
-
-                    </td>
-                </tr>
+                
                 <tr>
                     <td>
                         Készlet

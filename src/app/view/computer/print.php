@@ -17,12 +17,21 @@ if(!empty($gyarto)) {
 }
 
 ?>
+
+<style>
+.fejlec
+{
+    font-size: 50px;
+    font-weight: 100px;
+}
+</style>
+
 <div class="col-md-6 col-sm-12">
     <table style="width:600px">
         <tr>
 
             <td colspan="2" style="text-align:center;color:white;background-color:deepskyblue ;font-weight: bold">
-                <p style="font-size: 40px;"><?=$nev?>
+                <p class="fejlec"><?=$nev?>
                 </p>
             </td>
 
