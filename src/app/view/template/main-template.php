@@ -25,6 +25,13 @@ use helper\Alert;
 </style>
 <style>
     @font-face {
+    font-family: 'Roboto Black';
+    font-style: normal;
+    font-weight: normal;
+    src: url('src/app/view/font/Roboto-Black.woff') format('woff');
+    
+    }
+    @font-face {
     font-family: 'Roboto Regular';
     font-style: normal;
     font-weight: normal;
@@ -37,6 +44,7 @@ use helper\Alert;
         font-family: 'Roboto Regular';
        
     }
+    
 </style>
 </head>
 <body>

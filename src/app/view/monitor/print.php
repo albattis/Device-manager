@@ -19,7 +19,13 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
 
 
 ?>
-
+<style>
+     h1{
+        font-family: 'Roboto Black';
+       
+    }
+    
+</style>
 <div class="contanier-fluid">
 
     <div class="row">
@@ -29,7 +35,7 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
 <tr>
 
     <td colspan="2" style="text-align:center;color:white;background-color:deepskyblue ;font-weight: bold; ">
-        <p style="font-size: 40px;"><?=$nev?>
+        <h1><?=$nev?></h1>
            </p>
     </td>
 
