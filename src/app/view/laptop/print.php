@@ -21,7 +21,7 @@ if(!empty($gyarto)) {
     <table style="width:600px">
         <tr>
 
-            <td colspan="2" style="background-color:deepskyblue ;font-weight: bold">
+            <td colspan="2" style="text-align:center;color:white;background-color:deepskyblue ;font-weight: bold">
                 <p style="font-size: 40px;"><?=$nev?>
                 </p>
             </td>

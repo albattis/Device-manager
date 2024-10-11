@@ -19,21 +19,7 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
 
 
 ?>
-<style>
-    @font-face {
-    font-family: 'Roboto Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: url('src/app/view/font/Roboto-Regular.woff') format('woff');
-    
-    }
-</style>
-<style type="text/css">
-     body{
-        font-family: 'Roboto Regular';
-        font-size: 23px;
-    }
-</style>
+
 <div class="contanier-fluid">
 
     <div class="row">
@@ -42,7 +28,7 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
 
 <tr>
 
-    <td colspan="2" style="background-color:deepskyblue ;font-weight: bold">
+    <td colspan="2" style="text-align:center;color:white;background-color:deepskyblue ;font-weight: bold; ">
         <p style="font-size: 40px;"><?=$nev?>
            </p>
     </td>
