@@ -22,7 +22,12 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
 <style>
      h1{
         font-family: 'Roboto Black';
+        
        
+    }
+    table
+    {
+        font-size: 25px;
     }
     
 </style>
@@ -30,12 +35,12 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
 
     <div class="row">
         <div class="col-6">
-<table style="width:600px">
+<table style="width:700px">
 
 <tr>
 
-    <td colspan="2" style="text-align:center;color:white;background-color:deepskyblue ;font-weight: bold; ">
-        <h1><?=$nev?></h1>
+    <td colspan="2" style="text-align:center;border-radius:20px 20px 0px 0px;color:white;background-color:deepskyblue ;font-weight: bold; ">
+        <h1 style="font-size:90px;"><?=$nev?></h1>
            </p>
     </td>
 
@@ -157,40 +162,34 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
                     </td>
 
                 </tr>
-   <tr>
-                    <td>
-                        <strong> Készlet</strong>
-                    </td>
-                    <td>
-                        <?php if($monitor->getKeszlet()=="Van"){?>Van<?php }else {?>Nincs<?php }?>
-                    </td>
-
-                </tr>
+   
    <tr>
                     <td>
                         <strong>  Garancia</strong>
                     </td>
                     <td>
-                        <?= $monitor->getGarancia()?>
+                        <?php if($monitor->getGarancia()=="Van"){?>12 hónap <strong>PiCi Shop</strong><?php } else {?>Nincs<?php }?>
                     </td>
 
                 </tr>
-   <tr>
-                    <td colspan="2">
-                       <p style="color:forestgreen;text-align: left;font-weight: bold;font-size: 50px;">PiCi Ár: </p><br><p style="color:forestgreen;text-align: center;font-weight: bold;font-size: 60px;"><?= number_format($monitor->getAr(),0,".",".")?>&nbsp;Ft
-                            <img src="./img/picishop.png" style="width:300px; position: absolute; top:900px; left:300px;"
-                    </td>
-
-
-                </tr>
-
+                
+            <tr style="border:0px;">
+                <td style="border:0px;"><p style="color:forestgreen;text-align: left;font-weight: bold;font-size: 50px;">PiCi Ár : </p></td>
+                <td style="border:0px;"><img src="./img/picishop.png" style="width:300px;"</td>
+            </tr>
+            <tr><td colspan="2">
+            <p style="color:forestgreen;text-align: center;font-weight: bold;font-size: 100px;"><?= number_format($monitor->getAr(),0,".",".")?>&nbsp;Ft
+            </td></tr>
             </table>
 
 </div>
         <div class="col-4">
-           <?php if(!empty($gyarto)){ ?> <img src="<?=$gyarto->getKep()?>" style="width:200px; position: absolute;top:160px; left:80px;"><?php ;}?> <?php //ips or led //?>
-            <img src="<?="img/kijelzo/".$monitor->getTipus().".jpg"?>" style="width:200px; position: absolute;top:310px; left:90px;"> <?php //gyarto ?>
+           <?php if(!empty($gyarto)){ ?> <img src="<?=$gyarto->getKep()?>" style="width:250px;position: absolute;top: 300px; left:-50px;"><?php ;}?> <?php //gyarto //?>
+            <img src="<?="img/kijelzo/".$monitor->getTipus().".jpg"?>" style="width:200px; position: absolute;top:310px; left:90px;"> <?php //ips or led ?>
             
         </div>
     </div>
 </div>
+<form>
+<input type="button" value="Print this page" onClick="window.print()">
+</form>
