@@ -15,6 +15,17 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
         $nev=$monitor->getNev();
     }
 
+    $monitor
+
+function felbontasSzamitas()
+{
+
+
+ if($szelleseg==1980 && $magassag==1080){return "Full Hd";}
+     else if($szelleseg==2560 && $magassag==1440){return "qhd"; }
+     else if($szelleseg==3840 && $szelleseg==2160){return "uhd";}
+
+}
 
 
 
@@ -40,7 +51,7 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
 <tr>
 
     <td colspan="2" style="text-align:center;border-radius:20px 20px 0px 0px;color:white;background-color:deepskyblue ;font-weight: bold; ">
-        <h1 style="font-size:90px;"><?=$nev?></h1>
+        <h1 style="font-size:90px;"><?=$nev?> Monitor</h1>
            </p>
     </td>
 
@@ -69,7 +80,7 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
                         <strong> Pixel méret</strong>
                     </td>
                     <td>
-                        <?= $monitor->getPixelMeret()?>
+                        <?= $monitor->getPixelMeret()?> mm
                     </td>
 
                 </tr>
@@ -132,8 +143,8 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
                         <strong>Csatlakozók</strong>
                     </td>
                     <td>
-                        <?php $usba=$monitor->getUsba();if( $usba =="Van"){?>Usb<?php }?>
-                        <?php $usbc=$monitor->getUsbc();if( $usbc =="Van"){?>,Usb-C<?php }?>
+                        <?php $usba=$monitor->getUsba();if( $usba =="Van"){?>USB<?php }?>
+                        <?php $usbc=$monitor->getUsbc();if( $usbc =="Van"){?>,USB-C<?php }?>
                         <?php $hdmi=$monitor->getHdmi();if( $hdmi =="Van"){?>,HDMI<?php }?>
                         <?php $dvid=$monitor->getdvid();if( $dvid =="Van"){?>,DVI-D<?php }?>
                         <?php $vga=$monitor->getVga();if( $vga =="Van"){?>,VGA<?php }?>
@@ -174,11 +185,11 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
                 </tr>
                 
             <tr style="border:0px;">
-                <td style="border:0px;"><p style="color:forestgreen;text-align: left;font-weight: bold;font-size: 50px;">PiCi Ár : </p></td>
+                <td style="border:0px;"><p style="color:forestgreen;text-align: left;font-weight: bold;font-size: 50px;">PiCi ár : </p></td>
                 <td style="border:0px;"><img src="./img/picishop.png" style="width:300px;"</td>
             </tr>
             <tr><td colspan="2">
-            <p style="color:forestgreen;text-align: center;font-weight: bold;font-size: 100px;"><?= number_format($monitor->getAr(),0,".",".")?>&nbsp;Ft
+            <p style="color:forestgreen;text-align: right;font-weight: bold;font-size: 100px;"><?= number_format($monitor->getAr(),0,".",".")?>&nbsp;Ft
             </td></tr>
             </table>
 
