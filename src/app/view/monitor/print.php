@@ -15,16 +15,25 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
         $nev=$monitor->getNev();
     }
 
-    $monitor
 
-function felbontasSzamitas()
+function colSzamitas($szell,$mag)
 {
+    //a2+b2=c2
+$count=round(sqrt((pow($szell,2)+pow($mag,2)))/2.57,0);
+return $count;
 
+}
+function felbontasSzamitas(Monitor $m)
+{
+$felbontando=$m->getFelbontas();
 
- if($szelleseg==1980 && $magassag==1080){return "Full Hd";}
-     else if($szelleseg==2560 && $magassag==1440){return "qhd"; }
-     else if($szelleseg==3840 && $szelleseg==2160){return "uhd";}
+$e="";
+$felbontas=explode(" x ",$felbontando,2);
 
+ if($felbontas[0]>="1920" && $felbontas[0]<=2559&&$felbontas[1]>="1080"&&$felbontas[1]<=1439){$e="Full Hd";}
+     else if($felbontas[0]>="2560" && $felbontas[0]<=3839 && $felbontas[1]>="1440"&&$felbontas[1]<="2159"){$e= "qhd"; }
+     else if($felbontas[0]=="3840" && $felbontas[1]=="2160"){$e="uhd";}
+return $e;
 }
 
 
@@ -51,7 +60,7 @@ function felbontasSzamitas()
 <tr>
 
     <td colspan="2" style="text-align:center;border-radius:20px 20px 0px 0px;color:white;background-color:deepskyblue ;font-weight: bold; ">
-        <h1 style="font-size:90px;"><?=$nev?> Monitor</h1>
+        <h1 style="font-size:90px;"><?=$nev." ".colSzamitas($monitor->getSzelesseg(),$monitor->getMagassag())?>" Monitor</h1>
            </p>
     </td>
 
@@ -189,14 +198,15 @@ function felbontasSzamitas()
                 <td style="border:0px;"><img src="./img/picishop.png" style="width:300px;"</td>
             </tr>
             <tr><td colspan="2">
-            <p style="color:forestgreen;text-align: right;font-weight: bold;font-size: 100px;"><?= number_format($monitor->getAr(),0,".",".")?>&nbsp;Ft
+                    <p style="color:forestgreen;text-align: right;font-weight: bolder ;font-size: 150px;"><strong><?= number_format($monitor->getAr(),0,".",".")?></strong>&nbsp;Ft
             </td></tr>
             </table>
 
 </div>
         <div class="col-4">
-           <?php if(!empty($gyarto)){ ?> <img src="<?=$gyarto->getKep()?>" style="width:250px;position: absolute;top: 300px; left:-50px;"><?php ;}?> <?php //gyarto //?>
-            <img src="<?="img/kijelzo/".$monitor->getTipus().".jpg"?>" style="width:200px; position: absolute;top:310px; left:90px;"> <?php //ips or led ?>
+            
+           <?php if(!empty($gyarto)){ ?> <img src="<?=$gyarto->getKep()?>" style="width:250px;position: absolute;top: 250px; left:-50px;"><?php ;}?> <?php //gyarto //?>
+            <img src="<?="img/kijelzo/". felbontasSzamitas($monitor) .".png"?>" style="width:200px; position: absolute;top:400px; left:0px;"> <?php //ips or led ?>
             
         </div>
     </div>
