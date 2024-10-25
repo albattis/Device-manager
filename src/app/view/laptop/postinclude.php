@@ -35,7 +35,14 @@ if(!empty($_POST["videokartya"]))
 {
 $laptopmodosit->videokartya($laptop->getId(),$_POST["videokartya"]);
 }
-
+if(!empty($_POST["felbontasszelesseg"]))
+    {
+        $laptopmodosit->felbontasszelesseg($laptop->getId(),$_POST["felbontasszelesseg"]);
+    }
+    if(!empty($_POST["felbontasmagassag"]))
+    {
+        $laptopmodosit->felbontasmagassag($laptop->getId(),$_POST["felbontasmagassag"]);
+    }
 if(!empty($_POST["tar"]&&!empty($_POST["tarmeret"])))
 {
 $tar=$_POST["tar"];

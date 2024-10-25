@@ -165,8 +165,8 @@ $gyarto = Gyarto::findOneById($pc->getGyarto());
                         Csatlakozók
                     </td>
                     <td>
-                        <?php $usba=$pc->getUsba();if( $usba =="Van"){?>Usb<?php }?>
-                        <?php $usbc=$pc->getUsbc();if( $usbc =="Van"){?>,Usb-C<?php }?>
+                        <?php $usba=$pc->getUsba();if( $usba =="Van"){?>USB<?php }?>
+                        <?php $usbc=$pc->getUsbc();if( $usbc =="Van"){?>,USB-C<?php }?>
                         <?php $hdmi=$pc->getHdmi();if( $hdmi =="Van"){?>,HDMI<?php }?>
                         <?php $vga=$pc->getVga();if( $vga =="Van"){?>,VGA<?php }?>
                         <?php $dvid=$pc->getDvid();if( $dvid =="Van"){?>,DVID<?php }?>

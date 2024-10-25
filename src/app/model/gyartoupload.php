@@ -8,12 +8,11 @@ $imgs=$_FILES;
 
 $gyarto=new Gyarto();
 $gyarto= Gyarto::findOneByName($_POST["gyartonev"]);
-var_dump($_FILES);
-var_dump($gyarto);
+
 
 $id=$gyarto->getId();
 $path="img/gyartok/";
-$filename=$path.$gyarto->getId().".jpg";
+$filename=$path.$gyarto->getId().".png";
 var_dump($filename);
 
     if(!file_exists($filename))

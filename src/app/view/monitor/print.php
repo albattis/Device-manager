@@ -66,6 +66,16 @@ return $e;
 
 
 </tr>
+    <tr>
+        <td>
+            <?php if(!empty($gyarto)){ ?> <img src="<?=$gyarto->getKep()?>" style="width:250px;display:inline-block;"><?php ;}?> <?php //gyarto //?>
+
+        </td>
+        <td>
+            <img src="<?="img/kijelzo/". felbontasSzamitas($monitor) .".png"?>" style="width:200px; display:inline-block;"> <?php //ips or led ?>
+
+        </td>
+    </tr>
    <tr>
                     <td>
                         <strong> Felbontás</strong>
@@ -205,9 +215,7 @@ return $e;
 </div>
         <div class="col-4">
             
-           <?php if(!empty($gyarto)){ ?> <img src="<?=$gyarto->getKep()?>" style="width:250px;position: absolute;top: 250px; left:-50px;"><?php ;}?> <?php //gyarto //?>
-            <img src="<?="img/kijelzo/". felbontasSzamitas($monitor) .".png"?>" style="width:200px; position: absolute;top:400px; left:0px;"> <?php //ips or led ?>
-            
+
         </div>
     </div>
 </div>

@@ -133,6 +133,17 @@ $gyarto = Gyarto::findOneById($laptop->getGyarto());
                 </tr>
                 <tr>
                     <td>
+                        Felbontás
+                    </td>
+                    <td>
+                        <?=$laptop->getFelbontasszelesseg()?> x <?=$laptop->getFelbontasmagassag()?>
+                    </td>
+                    <td>
+                        <div id="felbontas"><button onclick="felbontas()">Modósit</button></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         Háttértár
                     </td>
                     <td>

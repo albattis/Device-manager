@@ -29,12 +29,13 @@ function memoria(){
         "                <div class=\"col-12 col-md-6\">\n<p> Slot:</p>" +
         "                    <select name=\"ddrertek\" id=\"ddrertek\">\n" +
         "                        <option value=\"e\"selected>?</option>\n" +
-        "                        <option value=\"2\">2 Gb</option>\n" +
-        "                        <option value=\"4\">4 Gb</option>\n" +
-        "                        <option value=\"6\">6 Gb</option>\n" +
-        "                        <option value=\"8\">8 Gb</option>\n" +
-        "                        <option value=\"16\">16 Gb</option>\n" +
-        "                        <option value=\"32\">32 Gb</option>\n" +
+        "                        <option value=\"2GB\">2 Gb</option>\n" +
+        "                        <option value=\"4GB\">4 Gb</option>\n" +
+        "                        <option value=\"6GB\">6 Gb</option>\n" +
+        "                        <option value=\"8GB\">8 Gb</option>\n" +
+        "                        <option value=\"16GB\">16 Gb</option>\n" +
+        "                        <option value=\"32GB\">32 Gb</option>\n" +
+        "                        <option value=\"64GB\">64 Gb</option>\n" +
         "                    </select>\n" +
         "                </div>\n" +
         "                <div class=\"col-12 col-md-6\">\n<p>2.</p>" +
@@ -50,12 +51,13 @@ function memoria(){
         "                <div class=\"col-12 col-md-6\"><p>Slot:</p>\n" +
         "                    <select name=\"slot\" id=\"slot\">\n" +
         "                        <option value=\"e\"selected>?</option>\n" +
-        "                        <option value=\"2\">2 Gb</option>\n" +
-        "                        <option value=\"4\">4 Gb</option>\n" +
-        "                        <option value=\"6\">6 Gb</option>\n" +
-        "                        <option value=\"8\">8 Gb</option>\n" +
-        "                        <option value=\"16\">16 Gb</option>\n" +
-        "                        <option value=\"32\">32 Gb</option>\n" +
+        "                        <option value=\"2GB\">2 Gb</option>\n" +
+        "                        <option value=\"4GB\">4 Gb</option>\n" +
+        "                        <option value=\"6GB\">6 Gb</option>\n" +
+        "                        <option value=\"8GB\">8 Gb</option>\n" +
+        "                        <option value=\"16GB\">16 Gb</option>\n" +
+        "                        <option value=\"32GB\">32 Gb</option>\n" +
+        "                        <option value=\"64GB\">64 Gb</option>\n" +
         "                    </select>\n" +
         "                </div><button type='submit'>Kész</button> </form>";
 }
@@ -81,11 +83,11 @@ function hattertar() {
         "                </select>\n" +
         "                <select name=\"tarmeret\" id=\"tarmeret\">\n" +
         "                    <option value=\"e\"selected>?</option>\n" +
-        "                    <option value=\"128 Gb\">128 Gb</option>\n" +
-        "                    <option value=\"240 Gb\">240 Gb</option>\n" +
-        "                    <option value=\"256 Gb\">256 Gb</option>\n" +
-        "                    <option value=\"500 Gb\">500 Gb</option>\n" +
-        "                    <option value=\"1 Tb\">1 TB</option>\n" +
+        "                    <option value=\"128 GB\">128 Gb</option>\n" +
+        "                    <option value=\"240 GB\">240 Gb</option>\n" +
+        "                    <option value=\"256 GB\">256 Gb</option>\n" +
+        "                    <option value=\"500 GB\">500 Gb</option>\n" +
+        "                    <option value=\"1 TB\">1 TB</option>\n" +
         "                </select>\n" +
         "\n" +
         "            </div>\n" +
@@ -100,11 +102,11 @@ function hattertar() {
         "                </select>\n" +
         "                <select name=\"tarmeret2\" id=\"tarmeret2\">\n" +
         "                    <option value=\"e\"selected>?</option>\n" +
-        "                    <option value=\"128 Gb\">128 Gb</option>\n" +
-        "                    <option value=\"240 Gb\">240 Gb</option>\n" +
-        "                    <option value=\"256 Gb\">256 Gb</option>\n" +
-        "                    <option value=\"500 Gb\">500 Gb</option>\n" +
-        "                    <option value=\"1 Tb\">1 TB</option>\n" +
+        "                    <option value=\"128 GB\">128 Gb</option>\n" +
+        "                    <option value=\"240 GB\">240 Gb</option>\n" +
+        "                    <option value=\"256 GB\">256 Gb</option>\n" +
+        "                    <option value=\"500 GB\">500 Gb</option>\n" +
+        "                    <option value=\"1 TB\">1 TB</option>\n" +
         "                </select>\n" +
         "\n" +
         "            </div>\n" +
@@ -165,4 +167,24 @@ function ar(){
  const ar=document.getElementById("ar");
  ar.innerHTML="";
  ar.innerHTML="<form method='post' action=''><input type='text' name='ar' id='ar'><button type='submit'>Kész</button></form>";
+}
+function felbontas()
+{
+const felbont=document.getElementById("felbontas");
+felbont.innerHTML="";
+felbont.innerHTML="<form method='post' action=''><select name=\"felbontasszelesseg\" id=\"felbontasszelesseg\"style=\"margin-bottom:5px;\">\n" +
+    "                    <option value=\"800\">800</option>\n" +
+    "                    <option value=\"1024\">1024</option>\n" +
+    "                    <option value=\"1080\">1080</option>\n" +
+    "                    <option value=\"1366\">1366</option>\n" +
+    "                    <option value=\"1400\">1400</option>\n" +
+    "                    <option value=\"1920\">1920</option>\n" +
+    "                </select> X\n" +
+    "                <select name=\"felbontasmagassag\" id=\"felbontasmagassag\"style=\"margin-bottom:5px;\">\n" +
+    "                    <option value=\"600\">600</option>\n" +
+    "                    <option value=\"768\">768</option>\n" +
+    "                    <option value=\"800\">800</option>\n" +
+    "                    <option value=\"1024\">1024</option>\n" +
+    "                    <option value=\"1200\">1200</option>\n" +
+    "                </select><button type='submit'>Kész</button></form>";
 }

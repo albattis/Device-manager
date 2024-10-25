@@ -52,13 +52,13 @@
                     <div class="col-12 col-md-6">
                         <select name="ddrertek" id="ddrertek">
                             <option value="e"selected>?</option>
-                            <option value="2 Gb">2 Gb</option>
-                            <option value="4 Gb">4 Gb</option>
-                            <option value="6 Gb">6 Gb</option>
-                            <option value="8 Gb">8 Gb</option>
-                            <option value="16 Gb">16 Gb</option>
-                            <option value="32 Gb">32 Gb</option>
-                            <option value="64 Gb">64 Gb</option>
+                            <option value="2 GB">2 Gb</option>
+                            <option value="4 GB">4 Gb</option>
+                            <option value="6 GB">6 Gb</option>
+                            <option value="8 GB">8 Gb</option>
+                            <option value="16 GB">16 Gb</option>
+                            <option value="32 GB">32 Gb</option>
+                            <option value="64 GB">64 Gb</option>
 
                         </select>
                     </div>
@@ -75,13 +75,13 @@
                     <div class="col-12 col-md-6">
                         <select name="slot" id="slot">
                             <option value="e"selected>?</option>
-                            <option value="2 Gb">2 Gb</option>
-                            <option value="4 Gb">4 Gb</option>
-                            <option value="6 Gb">6 Gb</option>
-                            <option value="8 Gb">8 Gb</option>
-                            <option value="16 Gb">16 Gb</option>
-                            <option value="32 Gb">32 Gb</option>
-                            <option value="64 Gb">64 Gb</option>
+                            <option value="2 GB">2 Gb</option>
+                            <option value="4 GB">4 Gb</option>
+                            <option value="6 GB">6 Gb</option>
+                            <option value="8 GB">8 Gb</option>
+                            <option value="16 GB">16 Gb</option>
+                            <option value="32 GB">32 Gb</option>
+                            <option value="64 GB">64 Gb</option>
                         </select>
                     </div>
                 </div>
@@ -145,11 +145,11 @@
                         </select>
                         <select name="tarmeret" id="tarmeret">
                             <option value="e"selected>?</option>
-                            <option value="128 Gb">128 Gb</option>
-                            <option value="240 Gb">240 Gb</option>
-                            <option value="256 Gb">256 Gb</option>
-                            <option value="500 Gb">500 Gb</option>
-                            <option value="1 Tb">1 TB</option>
+                            <option value="128 GB">128 Gb</option>
+                            <option value="240 GB">240 Gb</option>
+                            <option value="256 GB">256 Gb</option>
+                            <option value="500 GB">500 Gb</option>
+                            <option value="1 TB">1 TB</option>
                         </select>
 
                     </div>
@@ -164,11 +164,11 @@
                         </select>
                         <select name="tarmeret2" id="tarmeret2">
                             <option value="e"selected>?</option>
-                            <option value="128 Gb">128 Gb</option>
-                            <option value="240 Gb">240 Gb</option>
-                            <option value="256 Gb">256 Gb</option>
-                            <option value="500 Gb">500 Gb</option>
-                            <option value="1 Tb">1 TB</option>
+                            <option value="128 GB">128 Gb</option>
+                            <option value="240 GB">240 Gb</option>
+                            <option value="256 GB">256 Gb</option>
+                            <option value="500 GB">500 Gb</option>
+                            <option value="1 TB">1 TB</option>
                         </select>
 
                     </div>

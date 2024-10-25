@@ -1,4 +1,4 @@
-"use strict"
+    "use strict"
 
 const elsoGomb=document.querySelector("#keszletmodosit");
 

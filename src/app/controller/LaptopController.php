@@ -32,12 +32,12 @@ class LaptopController extends CommonController
 
     public function actionCreate()
     {
-        $pc=new Laptop();
+        $laptop=new Laptop();
         $this->title="Laptop hozzáadása";
 
         if(isset($_POST)) {
 
-          $pc->load($_POST);
+          $laptop->load($_POST);
 
 
             if ($laptop->Insert() ){

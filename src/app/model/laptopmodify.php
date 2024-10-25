@@ -339,4 +339,29 @@ class laptopmodify
         return $statement->fetchObject(self::class);
     }
 
+    public function felbontasszelesseg($id, $ertek)
+    {
+        $conn = Database::getConnection();
+        $sql = "UPDATE `laptop` set `felbontasszelesseg`=:ertek where `laptop`.`id`=:id;";
+        $statement = $conn->prepare($sql);
+        $statement->execute([
+           ':ertek' => $ertek,
+           ':id' => $id
+        ]);
+        return $statement->fetchObject(self::class);
+    }
+
+    public function felbontasmagassag($id, $ertek)
+    {
+        $conn = Database::getConnection();
+        $sql = "UPDATE `laptop` set `felbontasmagassag`=:ertek where `laptop`.`id`=:id;";
+        $statement = $conn->prepare($sql);
+        $statement->execute([
+            ':ertek' => $ertek,
+            ':id' => $id
+        ]);
+        return $statement->fetchObject(self::class);
+
+    }
+
 }
