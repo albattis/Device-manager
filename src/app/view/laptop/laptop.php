@@ -7,7 +7,7 @@ use app\model\Gyarto;
  * @var Laptop $laptop;
  */
 
- 
+
 
 if(!empty($_FILES))
 {
@@ -25,6 +25,20 @@ if(!empty($_POST)) {
 $gyarto = Gyarto::findOneById($laptop->getGyarto());
 
 ?>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3"style="margin-left:100px;"    >
+            <a href="http://localhost/insert/index.php?controller=Laptop&action=view"><img src="./img/back.png" style="display:inline-block; margin-right: auto; width:100px; height: 100px;"></a>
+
+        </div>
+        <div class="col-3"style="margin-left:100px;">
+            <a href="http://localhost/insert/index.php?controller=Laptop&action=Nyomtatas&id=<?=$laptop->getid()?>"><img src="./img/print.png" style="display:inline-block; margin-right: auto; width:100px; height: 100px;"></a>
+        </div>
+    </div>
+</div>
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-12 col-sm-12">
@@ -50,9 +64,7 @@ $gyarto = Gyarto::findOneById($laptop->getGyarto());
                 <input type="file" style="margin-bottom: 10px;margin-left:20px;"name="img[]" id="files" accept=".jpg,.jpeg,.png" multiple>
                 <input type="submit" value="Feltöltés" name="submit">
         </div>
-        <div class="col-md-3 col-sm-12" >
-            <a href="index.php?controller=Laptop&action=Nyomtatas&id=<?=$laptop->getId();?>" target="_blank" class="btn btn-primary" >Nyomtatás</a>
-        </div>
+       
 
     </div>
 
@@ -189,7 +201,7 @@ $gyarto = Gyarto::findOneById($laptop->getGyarto());
                         <?php $dvid=$laptop->getDvid();if( $dvid =="Van"){?>,DVID<?php }?>
                         <?php $display=$laptop->getDisplay();if( $display =="Van"){?>,DisplayPort<?php }?>
                         <?php $rj=$laptop->getRj45();if( $rj =="Van"){?>,RJ-45<?php }?>
-                        <?php $fullhalgato=$laptop->getFullhalgato();if( $fullhalgato =="Van"){?>,Füllhallgató<?php }?>
+                        <?php $fullhalgato=$laptop->getFullhallgato();if( $fullhalgato =="Van"){?>,Füllhallgató<?php }?>
                         <?php $mikorofon=$laptop->getMikrofon();if( $vga =="Van"){?>,Mikrofon<?php }?>
                     </td>
                     <td>
@@ -248,4 +260,9 @@ $gyarto = Gyarto::findOneById($laptop->getGyarto());
             </div>
         </div>
     </div>
+
+    <div>
+        <button onclick="window.close()">Bezár</button>
+    </div>
+
     <script src="./js/laptop.js"></script>

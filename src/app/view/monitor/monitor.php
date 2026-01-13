@@ -22,10 +22,26 @@ $gyarto = Gyarto::findOneById($monitor->getGyarto());
 $modify=new \app\model\monitormodify();
 include("postinclude.php");
 ?>
+<div class="container-fluid">
+
+
+
+
+<div class="row">
+    <div class="col-3">
+    <a href="http://localhost/insert/index.php?controller=Monitor&action=view"><img src="./img/back.png" style="margin-left:100px; width:100px; height: 100px;"></a>
+
+    </div>
+<div class="col-3">
+    <a href="http://localhost/insert/index.php?controller=Monitor&action=Nyomtatas&id=<?=$monitor->getid()?>"><img src="./img/print.png" style="margin-left:100px;width:100px; height: 100px;"></a>
+</div>
+</div>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-md-12 col-sm-12">
-            <h2 class="kozepre"><?=$monitor->getNev() ?> </h2>
+            <h2 class="kozepre"><?=$gyarto->getNev() ?>&nbsp; <?=$monitor->getNev() ?> </h2>
+
         </div>
     </div>
     <div class="row">
@@ -48,9 +64,7 @@ include("postinclude.php");
             <input type="file" style="margin-bottom: 10px;margin-left:20px;"name="img[]" id="files" accept=".jpg,.jpeg,.png" multiple>
         <input type="submit" value="Feltöltés" name="submit">
         </div>
-        <div class="col-md-3 col-sm-12" >
-            <a href="index.php?controller=Monitor&action=Nyomtatas&id=<?=$monitor->getId();?>" target="_blank" class="btn btn-primary" >Nyomtatás</a>
-    </div>
+
 
 
 

@@ -44,6 +44,11 @@ function felbontasSzamitas(Laptop $laptop)
 
 
 <style>
+    .robotofont
+    {
+        font-family: 'Roboto Black';
+
+    }
     h1{
         font-family: 'Roboto Black';
 
@@ -61,7 +66,7 @@ function felbontasSzamitas(Laptop $laptop)
 
 </style>
 <div class="row">
-<div class="col-6">
+    <div class="col-6">
     <table style="width:700px">
         <tr>
 
@@ -152,7 +157,7 @@ function felbontasSzamitas(Laptop $laptop)
                 <?php $dvid=$laptop->getDvid();if( $dvid =="Van"){?>,DVI-D<?php }?>
                 <?php $display=$laptop->getDisplay();if( $display =="Van"){?>,DisplayPort<?php }?>
                 <?php $rj=$laptop->getRj45();if( $rj =="Van"){?>,RJ-45<?php }?>
-                <?php $fullhalgato=$laptop->getFullhalgato();if( $fullhalgato =="Van"){?>,Füllhallgató<?php }?>
+                <?php $fullhalgato=$laptop->getFullhallgato();if( $fullhalgato =="Van"){?>,Füllhallgató<?php }?>
                 <?php $mikorofon=$laptop->getMikrofon();if( $vga =="Van"){?>,Mikrofon<?php }?>
             </td>
 
@@ -171,18 +176,18 @@ function felbontasSzamitas(Laptop $laptop)
                 <strong>Garancia</strong>
             </td>
             <td>
-                <?php if($laptop->getGarancia()=="Van"){?> 12 Hónap PiCi Shop garancia <?php }else{?> Nincs <?php }?>
+                <?php if($laptop->getGarancia()=="Van"){?> 12 Hónap garancia <?php }else{echo($laptop->getGarancia()); }?>
             </td>
 
         </tr>
 
         <tr style="border:0px;">
-            <td style="border:0px;"><p style="color:forestgreen;text-align: center;font-weight: bold;font-size: 50px;">PiCi ár : </p></td>
-            <td style="border-bottom: 0px;"><img src="./img/picishop.png" style="width:100%" alt=""></td>
+            <td style="border:0px;"><p style="color:forestgreen;text-align: center;font-weight: bold;font-size: 50px;">Jelenlegi ár : </p></td>
+            <td style="border-bottom: 0px; text-align: right"><img src="./img/minta.png" style="width:50%" alt=""></td>
         </tr>
 
-        <tr style="background-image:url('./img/picishop.png');background-repeat: no-repeat;background-attachment: fixed"><td colspan="2">
-                <p style="color:forestgreen; text-align: right;text-decoration:underline; text-decoration-color:#7faedd;  font-weight: bolder ;font-size: 150px;"><strong><?= number_format($laptop->getAr(),0,".",".")?></strong>&nbsp;Ft
+        <tr><td colspan="2">
+                <p class="laptopar robotofont"><strong><?= number_format($laptop->getAr(),0,".",".")?></strong>&nbsp;Ft
                 </p>
 
 
@@ -193,8 +198,14 @@ function felbontasSzamitas(Laptop $laptop)
 
     </table>
 </div>
-
-<div class="col-4">
-
-
 </div>
+    <div class="row">
+        <div class="col-md-3 col-sm-12">
+            <a href="http://localhost/insert/index.php?controller=Laptop&action=Laptop&id=<?=$laptop->getId()?>"><img src="./img/back.png" style="margin-left:100px; margin-top:20px; width:100px; height: 100px;"></a>
+
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <button style="border:0px; margin-left:100px;" onclick="window.print()"><img src="./img/print.png" style=" width:100px; height: 100px;"></button>
+        </div>
+
+    </div>

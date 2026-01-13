@@ -7,8 +7,14 @@ use app\model\Laptop;
 
 
 ?>
-
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-3" style="margin-left:100px;"><a href="http://localhost/insert/index.php?controller=laptop&action=index"><img src="./img/back.png" style="display:inline-block; margin-right: auto; width:100px; height: 100px;"></a>
+</div>
+    </div>
+</div>
 <h1>Laptopjaink</h1>
+
 
 
 <div class="container">

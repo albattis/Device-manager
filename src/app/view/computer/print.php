@@ -36,11 +36,14 @@ h1{
 }
 table
 {
-    font-size: 25px;
-    border-bottom: 1px solid black;
-    font-family: 'Roboto Black';
-}
+    font-size: 20px;
 
+}
+.roboto
+{
+    font-family: 'Roboto Black';
+    font-size: 25px;
+}
 
 </style>
 
@@ -51,14 +54,21 @@ table
         <tr>
 
             <td colspan="2" style="text-align:center; color: #134a97;border-radius:20px 20px 0px 0px; background-color:deepskyblue ;font-weight: bold; ">
-                <h1><?=$nev?></h1>
+                <h1 style="font-size: 60px;"><?=$nev?></h1>
 
             </td>
+        <tr>
+            <td colspan="2">
+                <?php if(!empty($gyarto)){ ?>
+                    <img src="<?=$gyarto->getKep()?>" style="margin-right:100px;width:30%; display:inline-block;"><?php ;}?> <?php $e=$pc->getProcessor(); $A=lcfirst(processorKep($e)); ?>
+                <img src="<?="img/windows/". $A .".png"?>" style="margin-right:100px;width:25%; display:inline-block;margin:0px 5px 0px 5px">
 
 
         </tr>
+
+        </tr>
         <tr>
-            <td>
+            <td class="roboto">
                 <strong>Processzor</strong>
             </td>
             <td>
@@ -67,7 +77,7 @@ table
 
         </tr>
         <tr>
-            <td>
+            <td class="roboto">
                 <strong>Memória</strong>
             </td>
             <td>
@@ -76,7 +86,7 @@ table
 
         </tr>
         <tr>
-            <td>
+            <td class="roboto">
                 <strong>Videókártya</strong>
             </td>
             <td>
@@ -85,36 +95,43 @@ table
 
         </tr>
         <tr>
-            <td>
+            <td class="roboto">
                 <strong> Háttértár<strong>
             </td>
             <td>
                 C:\<?= $pc->getHattertar()?><br>
 
-                <?php if($pc->getHattertar2()=="e GB e"||$pc->getHattertar2()=="e"||is_null($pc->getHattertar2())){echo( "Nincs"); }else{?>D:\ <?php echo($pc->getHattertar2());}?>
-            </td>
+                </td>
 
         </tr>
         <tr>
-            <td>
+            <td class="roboto">
                 <strong>Operációs Rendszer:</strong>
             </td>
             <td>
-                <?= $pc->getoprendszer()?>
+                <?= $pc->getoprendszer()?> elérhető hozzá.
             </td>
 
         </tr>
         <tr>
-            <td>
+            <td class="roboto">
                 <strong>Optikai meghajtó</strong>
             </td>
             <td>
-                <?= $pc->getOptikaimeghajto()?>
+                
+                <?php if($pc->getOptikaimeghajto()=="Nincs")
+                {
+                    echo("Optikai meghajtó elérhetö hozztá");
+                }else
+                {
+                    echo($pc->getOptikaimeghajto());
+                }
+                ?>
             </td>
 
         </tr>
         <tr>
-            <td>
+            <td class="roboto">
                 <strong> Csatlakozók</strong>
             </td>
             <td>
@@ -131,7 +148,7 @@ table
 
         </tr>
         <tr>
-            <td>
+            <td class="roboto">
                 <strong>Hibák</strong>
             </td>
             <td>
@@ -140,30 +157,42 @@ table
 
         </tr>
         <tr>
-            <td>
+            <td class="roboto">
                 <strong>Garancia</strong>
             </td>
             <td>
-                <?= $pc->getGarancia()?>
+                <?php if($pc->getGarancia()=="Van")
+                {
+                    echo("12 hónap PiCi Shop garancia");
+                }else
+                {
+                    echo($pc->getGarancia());
+                }
+                ?>
             </td>
 
         </tr>
 
         <tr style="border:0px;">
-            <td style="border:0px;"><p style="color:forestgreen;text-align: left;font-weight: bold;font-size: 50px;">PiCi ár : </p></td>
-            <td style="border:0px;"><img src="./img/picishop.png" style="width:300px;"</td>
+            <td style="border:0px;"><p style="color:forestgreen;text-align: center;font-weight: bold;font-size: 50px;">Jelnelegi ár : </p></td>
+            <td style="border-bottom: 0px;text-align: right;"><img src="./img/minta.png" style="width:50%" alt=""></td>
         </tr>
+
         <tr><td colspan="2">
-                <p style="color:forestgreen;text-align: right;font-weight: bolder ;font-size: 150px;"><strong><?= number_format($pc->getAr(),0,".",".")?></strong>&nbsp;Ft
-                </p></td></tr>
-        </table>
+                <p class="laptopar robotofont"><strong><?= number_format($pc->getAr(),0,".",".")?></strong>&nbsp;Ft
+                </p>
+        </tr>
+
+    </table>
     </div>
-        <div class="col-4">
 
-    <?php if(!empty($gyarto)){ ?> <img src="<?=$gyarto->getKep()?>" style="width:200px;position: absolute;top: 300px; left:0px;"><?php ;}?> <?php //gyarto //?>
-    <?php
-    $e=$pc->getProcessor();
-    $A=lcfirst(processorKep($e));?>
-    <img src="<?="img/windows/". $A .".png"?>" style="width:200px; position: absolute;top:100px; left:0px;"> <?php //ips or led ?>
 
-</div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <a href="http://localhost/insert/index.php?controller=Computer&action=Pc&id=<?=$pc->getid()?>"><img src="./img/back.png" style="margin-left:100px; margin-top:20px;width:100px; height: 100px;"></a>
+                </div>
+                <div class="col-3">
+                    <button style="border:0px; margin-left:100px; " onclick="window.print()"><img src="./img/print.png" style="display:inline-block;  width:100px; height: 100px;"></button>
+                </div>
+            </div></div>

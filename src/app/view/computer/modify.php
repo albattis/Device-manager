@@ -185,7 +185,7 @@ use app\model\Computer;
             <div class="col-md-4" style="border:1px solid darkblue;">
                 <h4>Garancia</h4>
                 <select name="garancia" id="garancia">
-                    <option value="Van"<?php if($pc->getGarancia()=="Van"){?> selected<?php }?>>12 hónap (PiCi Shop)</option>
+                    <option value="Van"<?php if($pc->getGarancia()=="Van"){?> selected<?php }?>>12 hónap</option>
                     <option value="Nincs"<?php if($pc->getGarancia()=="Nincs"){?> selected<?php }?>>Nincs</option>
                 </select>
             </div>

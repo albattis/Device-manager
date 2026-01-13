@@ -33,6 +33,7 @@ $felbontas=explode(" x ",$felbontando,2);
  if($felbontas[0]>="1920" && $felbontas[0]<=2559&&$felbontas[1]>="1080"&&$felbontas[1]<=1439){$e="Full Hd";}
      else if($felbontas[0]>="2560" && $felbontas[0]<=3839 && $felbontas[1]>="1440"&&$felbontas[1]<="2159"){$e= "qhd"; }
      else if($felbontas[0]=="3840" && $felbontas[1]=="2160"){$e="uhd";}
+     else ($e="none");
 return $e;
 }
 
@@ -51,16 +52,19 @@ return $e;
     }
     
 </style>
+
+
+
 <div class="contanier-fluid">
 
     <div class="row">
-        <div class="col-6">
+        <div class="col-md-8 col-sm-12">
 <table style="width:700px">
 
 <tr>
 
     <td colspan="2" style="text-align:center;border-radius:20px 20px 0px 0px;color:white;background-color:deepskyblue ;font-weight: bold; ">
-        <h1 style="font-size:90px;"><?=$nev." ".colSzamitas($monitor->getSzelesseg(),$monitor->getMagassag())?>" Monitor</h1>
+        <h1 style="font-size:80px;"><?=$nev." ".colSzamitas($monitor->getSzelesseg(),$monitor->getMagassag())?>" Monitor</h1>
            </p>
     </td>
 
@@ -68,11 +72,11 @@ return $e;
 </tr>
     <tr>
         <td>
-            <?php if(!empty($gyarto)){ ?> <img src="<?=$gyarto->getKep()?>" style="width:250px;display:inline-block;"><?php ;}?> <?php //gyarto //?>
+            <?php if(!empty($gyarto)){ ?> <img src="<?=$gyarto->getKep()?>" style="width:150px;display:inline-block;"><?php ;}?> <?php //gyarto //?>
 
         </td>
         <td>
-            <img src="<?="img/kijelzo/". felbontasSzamitas($monitor) .".png"?>" style="width:200px; display:inline-block;"> <?php //ips or led ?>
+            <img src="<?="img/kijelzo/". felbontasSzamitas($monitor) .".png"?>" style="width:150px; display:inline-block;"> <?php //ips or led ?>
 
         </td>
     </tr>
@@ -198,27 +202,31 @@ return $e;
                         <strong>  Garancia</strong>
                     </td>
                     <td>
-                        <?php if($monitor->getGarancia()=="Van"){?>12 hónap <strong>PiCi Shop</strong><?php } else {?>Nincs<?php }?>
+                        <?php if($monitor->getGarancia()=="Van"){?>12 hónap <strong>PiCi Shop</strong><?php } else {echo($monitor->getGarancia()); }?>
                     </td>
 
                 </tr>
                 
             <tr style="border:0px;">
-                <td style="border:0px;"><p style="color:forestgreen;text-align: left;font-weight: bold;font-size: 50px;">PiCi ár : </p></td>
-                <td style="border:0px;"><img src="./img/picishop.png" style="width:300px;"</td>
+                <td style="border:0px;"><p style="color:forestgreen;text-align: left;font-weight: bold;font-size: 50px;">Jelenlegi ár : </p></td>
+                <td style="border:0px;text-align: right;"><img src="./img/minta.png" style="width:50%;"</td>
             </tr>
             <tr><td colspan="2">
-                    <p style="color:forestgreen;text-align: right;font-weight: bolder ;font-size: 150px;"><strong><?= number_format($monitor->getAr(),0,".",".")?></strong>&nbsp;Ft
+                    <p style="color:forestgreen;text-align: right;font-weight: bolder ;font-size: 100px;"><strong><?= number_format($monitor->getAr(),0,".",".")?></strong>&nbsp;Ft
             </td></tr>
             </table>
 
 </div>
-        <div class="col-4">
-            
 
-        </div>
     </div>
 </div>
-<form>
-<input type="button" value="Print this page" onClick="window.print()">
-</form>
+<div class="row">
+    <div class="col-md-3 col-sm-12">
+        <a href="http://localhost/insert/index.php?controller=Monitor&action=Monitor&id=<?=$monitor->getId()?>"><img src="./img/back.png" style=" margin-left:100px; width:150px; height: 150px;"></a>
+
+    </div>
+    <div class="col-md-3 col-sm-12">
+        <button style="border:0px; margin-left:100px; " onclick="window.print()"><img src="./img/print.png" style="display:inline-block;  width:150px; height: 150px;"></button>
+    </div>
+</div>
+

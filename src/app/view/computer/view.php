@@ -7,7 +7,9 @@ use app\model\Computer;
  */
 
 ?>
-
+<div class="container-fluid">
+    <a href="http://localhost/insert/index.php?controller=computer&action=index"><img src="./img/back.png" style="margin-left:100px; width:100px; height: 100px;"></a>
+</div>
 
             <h1>Jelenlegi gépeink</h1>
 

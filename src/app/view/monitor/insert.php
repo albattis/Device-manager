@@ -1,4 +1,7 @@
 
+<div class="container-fluid">
+    <a href="http://localhost/insert/index.php?controller=monitor&action=index"><img src="./img/back.png" style="margin-left:100px;width:100px; height: 100px;"></a>
+</div>
 
 
 
@@ -216,7 +219,9 @@
             <div class="col-md-5" style="border:1px solid darkblue;">
                 <h4>Garancia</h4>
                 <select name="garancia" id="garancia">
-                    <option value="Van">12 hónap (PiCi Shop)</option>
+                    <option value="12 hónap">12 hónap (PiCi Shop)</option>
+                    <option value="24 hónap">24 hónap (PiCi Shop)</option>
+                    <option value="36 hónap">36 hónap (PiCi Shop)</option>
                     <option value="Nincs">Nincs</option>
                 </select>
             </div>

@@ -5,9 +5,16 @@
                     $gyartok= Gyarto::findAll();
 ?>
 
+
+<div class="container-fluid">
+    <a href="http://localhost/insert/index.php?controller=laptop&action=index"><img src="./img/back.png" style="margin-left:100px; width:100px; height: 100px;"></a>
+</div>
+
+
+
 <form action="index.php?controller=Laptop&action=Create" method="post"class="col formformat">
     <div class="container-fluid">
-        <h1>Számitógép felvétel</h1>
+        <h1>Laptop felvétel</h1>
         <div class="row m-3">
             <div class="col-md-4 col-sm-12" style="margin-bottom:5px; border:1px solid darkblue;">
                 <h4>Gyártó</h4>
@@ -98,6 +105,7 @@
                     <option value="11">11</option>
                     <option value="11.6">11.6</option>
                     <option value="12">12</option>
+                    <option value="12.2">12.2</option>
                     <option value="13">13</option>
                     <option value="13.3">13.3</option>
                     <option value="14">14</option>
@@ -122,10 +130,11 @@
                     <option value="768">768</option>
                     <option value="800">800</option>
                     <option value="1024">1024</option>
+                    <option value="1080">1080</option>
                     <option value="1200">1200</option>
                 </select>
                 <select name="tipus" id="tipus" style="margin-bottom:5px;">
-                    <option value="e"selected>Tipus</option>
+                    <option value="e" selected>Tipus</option>
                     <option value="IPS">IPS</option>
                     <option value="HD">HD</option>
                     <option value="Full Hd">Full Hd</option>
@@ -272,7 +281,9 @@
                 <div class="col-md-4" style="border:1px solid darkblue;">
                     <h4>Garancia</h4>
                     <select name="garancia" id="garancia">
-                        <option value="Van">12 hónap (PiCi Shop)</option>
+                        <option value="12 hónap">12 hónap</option>
+                        <option value="24 hónap">24 hónap</option>
+                        <option value="36 hónap">36 hónap</option>
                         <option value="Nincs">Nincs</option>
                     </select>
                 </div>

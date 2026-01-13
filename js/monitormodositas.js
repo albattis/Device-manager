@@ -120,7 +120,9 @@ function garanciamodositas()
     const garancia=document.getElementById("garancia");
     garancia.innerHTML="";
     garancia.innerHTML="<form method='post' action=''><select name=\"garancia\" id=\"garancia\" style=\"margin-bottom:5px;\">" +
-        "<option value=\"Van:\">Van</option>" +
+        "<option value=\"12 hónap \">12 hónap </option>" +
+        "<option value=\"24 hónap \">24 hónap </option>" +
+        "<option value=\"36 hónap \">36 hónap </option>" +
         "<option value=\"Nincs\">Nincs</option>" +
         "</select><button type='submit'>Modosit</button></form>";
 }

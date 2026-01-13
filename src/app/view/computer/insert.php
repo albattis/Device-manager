@@ -1,3 +1,6 @@
+<div class="container-fluid">
+    <a href="http://localhost/insert/index.php?controller=computer&action=index"><img src="./img/back.png" style="margin-left:100px; width:100px; height: 100px;"></a>
+</div>
 
 
 <form action="index.php?controller=Computer&action=Create" method="post"class="col formformat">
@@ -20,7 +23,7 @@
     </div>
     <div class="col-md-4 col-sm-12" style="border:1px solid darkblue;">
         <h4 class="kozep">Megnevezés</h4>
-            <input type="text" name="nev" id="nev">
+            <input type="text" name="nev" id="nev" required>
         </div>
     <div class="col-md-4 col-sm-12" style="border:1px solid darkblue;">
         <h4 class="kozep">Processzor</h4>
@@ -63,7 +66,7 @@
                     </select>
                 </div>
                 <div class="col-12 col-md-6">
-                <select name="ddr2" id="ddr2">
+                <select name="ddr2" id="ddr2"required>
                     <option value="e"selected>?</option>
                     <option value="DDR1">DDR 1</option>
                     <option value="DDR2">DDR 2</option>
@@ -73,7 +76,7 @@
                 </select>
                 </div>
                 <div class="col-12 col-md-6">
-                    <select name="slot" id="slot">
+                    <select name="slot" id="slot" required>
                         <option value="e"selected>?</option>
                         <option value="2 Gb">2 Gb</option>
                         <option value="4 Gb">4 Gb</option>
@@ -88,21 +91,21 @@
         </div>
     <div class="col-sm-12 col-md-4 " style="border:1px solid darkblue;">
         <h4>Videókártya</h4>
-        <input type="text" name="videokartya" id="vcard">
+        <input type="text" name="videokartya" id="vcard" required>
     </div>
      <div class="col-sm-12 col-md-4 " style="border:1px solid darkblue;">
         <h4 style="text-align: center;">Háttértár</h4>
         <div class="row m-3">
             <div class="col-12 col-md-6">
                 <h5 style="text-align: center;">C:\</h5>
-                <select name="tar" id="tar">
+                <select name="tar" id="tar" required>
                     <option value="e"selected>?</option>
                     <option value=" SSD">SSD</option>
                     <option value=" HDD">HDD</option>
                     <option value=" M.2">M.2</option>
                     <option value=" NVMe">NVMe</option>
                 </select>
-                <select name="tarmeret" id="tarmeret">
+                <select name="tarmeret" id="tarmeret"required>
                     <option value="e"selected>?</option>
                     <option value="128 Gb">128 Gb</option>
                     <option value="240 Gb">240 Gb</option>
@@ -138,7 +141,7 @@
 <div class="row m-3">
             <div class="col-sm-12 col-md-6" style="border:1px solid darkblue;">
                 <h4>Windows rendszer</h4>
-                <select name="oprendszer" id="oprendszer">
+                <select name="oprendszer" id="oprendszer" required>
                     <option value="Windows 10 Home">Windows 10 Home</option>
                     <option value="Windows 10 Pro">Windows 10 Pro</option>
                     <option value="Windows 11 Home">Windows 11 Home</option>
@@ -182,8 +185,9 @@
                     <option  value="Van">Van</option>
                     <option value="Nincs">Nincs</option>
                 </select>
+                </div>
                 <div class="col-md-3">
-                    <label for="dvid">VGA</label>
+                    <label for="dvid">DVI-D</label>
                     <select name="dvid" id="dvid">
                         <option  value="Van">Van</option>
                         <option value="Nincs">Nincs</option>
@@ -230,7 +234,9 @@
         <div class="col-md-4" style="border:1px solid darkblue;">
             <h4>Garancia</h4>
             <select name="garancia" id="garancia">
-                <option value="Van">12 hónap (PiCi Shop)</option>
+                <option value="12 hónap">12 hónap</option>
+                <option value="24 hónap">24 hónap</option>
+                <option value="36 hónap">36 hónap</option>
                 <option value="Nincs">Nincs</option>
             </select>
         </div>

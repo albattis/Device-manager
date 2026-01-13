@@ -157,8 +157,10 @@ function garancia() {
  const garancia=document.getElementById("garancia");
  garancia.innerHTML="";
  garancia.innerHTML="<form method='post' action=''><select name=\"garancia\" id=\"garancia\">\n" +
-     "                <option value=\"Van\">12 hónap (PiCi Shop)</option>\n" +
-     "                <option value=\"Nincs\">Nincs</option>\n" +
+     "<option value=\"12 hónap \">12 hónap </option>" +
+     "<option value=\"24 hónap \">24 hónap </option>" +
+     "<option value=\"36 hónap \">36 hónap </option>" +
+     "<option value=\"Nincs\">Nincs</option>" +
      "            </select><button type='submit'>Kész</button> </form>";
 
 }

@@ -60,7 +60,7 @@ if((!empty($_POST)))
         if($_POST["inchmagassag"]!="")
             if(!empty($_POST["metrik"]))
             {
-                $modify->magassagmetrikmodosit($monitor->getId(),$_POST["inchszelesseg"]);
+                $modify->magassagmetrikmodosit($monitor->getId(),$_POST["inchmagassag"]);
 
             }else{
                 $ertek=$_POST["inchmagassag"]*2.54;

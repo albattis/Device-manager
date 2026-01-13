@@ -7,7 +7,9 @@ use app\model\Monitor;
  */
 
 ?>
-
+<div class="container-fluid">
+    <a href="http://localhost/insert/index.php?controller=monitor&action=index"><img src="./img/back.png" style="margin-left:100px; width:100px; height: 100px;"></a>
+</div>
 
 <h1>Monitor</h1>
 

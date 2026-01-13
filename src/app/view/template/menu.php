@@ -17,6 +17,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?controller=laptop&action=index">Laptopok</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../picidabo/index.php">Dashboard</a>
+                </li>
 
             </ul>
 

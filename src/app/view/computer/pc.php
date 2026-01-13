@@ -24,6 +24,15 @@ if(!empty($_POST)) {
 $gyarto = Gyarto::findOneById($pc->getGyarto());
 
 ?>
+<div class="container-fluid">
+<div class="row">
+    <div class="col-3">
+    <a href="http://localhost/insert/index.php?controller=Computer&action=view"><img src="./img/back.png" style="margin-left:100px; width:100px; height: 100px;"></a>
+</div>
+<div class="col-3">
+    <a href="http://localhost/insert/index.php?controller=Computer&action=Nyomtatas&id=<?=$pc->getid()?>"><img src="./img/print.png" style="margin-left:100px;width:100px; height: 100px;"></a>
+</div>
+</div></div>
 <div class="container">
     <div class="row">
         <div class="col-md-12 col-sm-12">
@@ -49,9 +58,7 @@ $gyarto = Gyarto::findOneById($pc->getGyarto());
                 <input type="file" style="margin-bottom: 10px;margin-left:20px;"name="img[]" id="files" accept=".jpg,.jpeg,.png" multiple>
                 <input type="submit" value="Feltöltés" name="submit">
         </div>
-        <div class="col-md-3 col-sm-12" >
-            <a href="index.php?controller=Computer&action=Nyomtatas&id=<?=$pc->getId();?>" target="_blank" class="btn btn-primary" >Nyomtatás</a>
-        </div>
+
 
     </div>
 
