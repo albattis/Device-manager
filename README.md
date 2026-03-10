@@ -25,4 +25,7 @@ Fájlfeltöltés: több képfájl kezelése egy eszközhöz, dinamikusan generá
 Felhasználói élmény: intuitív gombok és űrlapok az adatmódosításhoz, azonnali frissítés (refreshpage), valamint nyomtatás barát nézet.
 
 Tanulási folyamat:
-Ez volt az első nagyobb projekt a PHP újratanulása során. A teljes kódot hibáról hibára fejlesztettem, így minden funkció mögött saját megértés és logika áll. Megtanultam osztálystruktúrákat kialakítani, adatbázis-kezelést implementálni és komplex űrlaplogikát létrehozni. A projekt a mai napig stabilan működik, és jól példázza a tanulási folyamatomat a gyakorlati PHP fejlesztésben.
+Ez volt az első nagyobb projektem amivel valós hatékonyságot lehetett elérni azáltal hogy nem kell word dokumentum szerkesztéssel időt tölteni. A teljes kódot hibáról hibára fejlesztettem, így minden funkció mögött saját megértés és logika áll. Megtanultam osztály struktúrákat kialakítani, adatbázis-kezelést implementálni és komplex űrlap logikát létrehozni. A projekt a bevezetés után is stabilan működik.
+
+
+
